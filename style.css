@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 3rem 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #00ff88;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-top: 0.2rem;
+}
+
+.letreiro {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    min-height: 3rem;
+}
+
+#typing {
+    color: #00ff88;
+    border-right: 2px solid #00ff88;
+    padding-right: 4px;
+}
+
+.hero-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero-links a {
+    color: #00ff88;
+    text-decoration: none;
+    border: 1px solid #00ff88;
+    padding: 0.4rem 1.6rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.hero-links a:hover {
+    background: #00ff88;
+    color: #0a0a0a;
+}
+
+/* ===== SEÇÕES ===== */
+section {
+    margin: 4rem 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #00ff88;
+    margin-bottom: 1.2rem;
+}
+
+/* ===== SOBRE ===== */
+.sobre p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #ccc;
+    background: #121212;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #1e1e1e;
+}
+
+/* ===== STACKS COM EFEITO DE OPACIDADE ===== */
+.stack-carousel {
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.stack-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: slide 25s linear infinite;
+}
+
+.stack-track span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #121212;
+    padding: 0.4rem 1.2rem;
+    border-radius: 40px;
+    border: 1px solid #2a2a2a;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.stack-track img {
+    width: 26px;
+    height: 26px;
+}
+
+/* ===== GITHUB STATS ===== */
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.stats-card {
+    background: #121212;
+    border-radius: 16px;
+    border: 1px solid #1e1e1e;
+    padding: 0.5rem;
+    transition: 0.3s;
+    max-width: 420px;
+    width: 100%;
+}
+
+.stats-card:hover {
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.05);
+}
+
+.stats-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ===== PROJETOS ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #121212;
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #e0e0e0;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.04);
+}
+
+.card h3 {
+    color: #00ff88;
+    margin-bottom: 0.3rem;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 0.95rem;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.btn-projeto {
+    display: inline-block;
+    background: transparent;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.btn-projeto:hover {
+    background: #00ff88;
+    color: #0a0a0a;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+    .stack-track {
+        gap: 1.5rem;
+        animation-duration: 18s;
+    }
+}
+
+/* ===== PROJETOS ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #121212;
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #e0e0e0;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.04);
+}
+
+.card h3 {
+    color: #00ff88;
+    margin-bottom: 0.3rem;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+    text-align: center;
+}
+
+.contato p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 0.8rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.social a {
+    color: #00ff88;
+    text-decoration: none;
+    border: 1px solid #00ff88;
+    padding: 0.4rem 1.6rem;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: #00ff88;
+    color: #0a0a0a;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1a1a1a;
+}
