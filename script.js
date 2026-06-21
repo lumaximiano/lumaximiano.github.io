@@ -11,12 +11,12 @@ function typeEffect() {
         typingElement.textContent = current.slice(0, charIndex++);
         if (charIndex > current.length) {
             isDeleting = true;
-            setTimeout(typeEffect, 2000);
+            setTimeout(typeEffect, 1000);
             return;
         }
     } else {
         typingElement.textContent = current.slice(0, charIndex--);
-        if (charIndex < 0) {
+        if (charIndex < 1) {
             isDeleting = false;
             index = (index + 1) % roles.length;
             setTimeout(typeEffect, 120);
